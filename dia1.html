@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Día 1 - Variables</title>
+  <style>
+    body { font-family: Arial, sans-serif; text-align: center; padding: 50px; }
+    .nav-buttons {
+      margin-top: 30px;
+    }
+    a {
+      text-decoration: none;
+      color: white;
+      background: #007acc;
+      padding: 10px 20px;
+      border-radius: 5px;
+      margin: 0 10px;
+      transition: 0.3s;
+    }
+    a:hover { background: #005b99; }
+
+    button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      background: #007acc;
+      color: white;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #005b99;
+    }
+    
+  </style>
+</head>
+<body>
+  <h1>Día 1 - Variables</h1>
+  <p>Ejercicio con <code>alert</code>. En este caso lo que había que hacer era corregir 
+    el código proporcionado por el profesor, para que imprima la información correcta. 
+  </p>
+
+  <script src="ejercicioDia1.js"></script>
+
+  <section id="contenido">
+    <h2> El código es el siguiente: </h2>
+  </section>
+
+  <nav>
+    <button onclick="mostrarDia(1)">Mostrar Código día 1</button>
+  </nav>
+
+  <script>
+    const codigos = {
+    1: `Dia 1:
+    let numeroUn = 1
+    let stringUn = '1'
+
+    let numeroTreinta = 30
+    let stringTreinta = '30'
+
+    let numeroDiez = 10
+    let stringDiez = '10'
+
+    if (numeroUn == stringUn) {alert('Las variables numeroUn y stringUn tienen el mismo valor, pero tipos diferentes')
+    } else {
+    alert('Las variables numeroUn y stringUn no tienen el mismo valor')
+    }
+
+    if (numeroTreinta === stringTreinta) {alert('Las variables numeroTreinta y stringTreinta tienen el mismo valor y el mismo tipo')
+    } else {alert('Las variables numeroTreinta y stringTreinta no tienen el mismo tipo')
+    }
+
+    if (numeroDiez == stringDiez) {alert('Las variables numeroDiez y stringDiez tienen el mismo valor, pero tipos diferentes')
+
+    } else {alert('Las variables numeroDiez y stringDiez no tienen el mismo valor')
+    } ` 
+    };
+
+    function mostrarDia(dia) {
+      const contenedor = document.getElementById("contenido");
+      contenedor.innerHTML = `
+      <h2> Dia ${dia} </h2>
+      <pre> ${codigos[dia]}</pre>
+      `;
+    }
+  </script>
+
+  <div class="nav-buttons">
+    <!-- Como es el primer día, solo va a "Siguiente" -->
+    <a href="index.html">🏠 Volver al Menú</a>
+    <a href="dia2.html">➡️ Siguiente Día</a>
+  </div>
+</body>
+</html>
